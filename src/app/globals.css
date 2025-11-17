@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --haze: #051118;
+  --forest: #0f3b2d;
+  --pine: #0e5c3b;
+  --frost: #d7fbe8;
+  --gold: #f6c177;
+  --cranberry: #c1124f;
+  --snow: #f8fafc;
+  --ink: #020617;
+}
+
+body {
+  min-height: 100vh;
+  background: #f7f7f7;
+  color: #0f172a;
+  font-family: var(--font-body, "Manrope", system-ui);
+  letter-spacing: 0.01em;
+}
+
+.dashboard-shell {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0b1d2a 0%, #020817 55%);
+  color: var(--snow);
+}
+
+.hero-grid {
+  position: relative;
+}
+
+.hero-grid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+      circle at 10% 20%,
+      rgba(246, 193, 119, 0.25),
+      transparent 45%
+    ),
+    radial-gradient(circle at 90% 10%, rgba(209, 250, 229, 0.2), transparent 40%);
+  pointer-events: none;
+}
+
+.glow-ring {
+  position: absolute;
+  inset: -120px;
+  border-radius: 999px;
+  background: radial-gradient(
+    circle,
+    rgba(246, 193, 119, 0.35),
+    rgba(15, 59, 45, 0)
+  );
+  filter: blur(60px);
+  opacity: 0.6;
+}
+
+.snowfall {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.45), transparent 65%);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
